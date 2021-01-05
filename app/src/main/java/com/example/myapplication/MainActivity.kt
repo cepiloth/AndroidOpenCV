@@ -1,11 +1,12 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import org.opencv.android.OpenCVLoader
 
 class MainActivity : AppCompatActivity() {
@@ -17,9 +18,14 @@ class MainActivity : AppCompatActivity() {
         // Example of a call to a native method
         findViewById<TextView>(R.id.sample_text).text = stringFromJNI()
         val imageView = ImageView(this);
-        imageView.setOnClickListener(object: View.OnClickListener {
+        imageView.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                imageView.setImageResource()
+                imageView.isDrawingCacheEnabled = true;
+                imageView.buildDrawingCache();
+                val bitmap:Bitmap = Bitmap.createBitmap(imageView.drawingCache);
+                val result: (Bitmap?) -> Bitmap = { bitmap: Bitmap? -> OpenCVWrapper.detectEdge(bitmap) };
+
+                Log.d("MainActivity", "OpenCV is loaded successfully!");
             }
         })
     }

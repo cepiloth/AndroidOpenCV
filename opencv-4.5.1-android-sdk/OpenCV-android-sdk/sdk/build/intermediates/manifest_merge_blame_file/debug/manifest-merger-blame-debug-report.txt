@@ -6,8 +6,8 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->C:\Users\jhlim\AndroidStudioProjects\MyApplication\opencv-4.5.1-android-sdk\OpenCV-android-sdk\sdk\java\AndroidManifest.xml
+8-->C:\Users\jhlim\Documents\GitHub\AndroidOpenCV\opencv-4.5.1-android-sdk\OpenCV-android-sdk\sdk\java\AndroidManifest.xml
 9        android:targetSdkVersion="26" />
-9-->C:\Users\jhlim\AndroidStudioProjects\MyApplication\opencv-4.5.1-android-sdk\OpenCV-android-sdk\sdk\java\AndroidManifest.xml
+9-->C:\Users\jhlim\Documents\GitHub\AndroidOpenCV\opencv-4.5.1-android-sdk\OpenCV-android-sdk\sdk\java\AndroidManifest.xml
 10
 11</manifest>
