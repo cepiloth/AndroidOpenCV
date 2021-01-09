@@ -20,4 +20,5 @@ fun main(args:Array<String>)
     val number3: Int = 100;
     val number4 = number3 ?: 10;
     println(number4)
+    println(number4)
 }
